@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUJOP: Archive and sections viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/my-css/pdfviewer.css">
+</head>
+
+<body>
+    <div class="control">
+        <button class="back-btn" onclick="history.back()">Back</button>
+        <button class="toggle-btn" id="toggle-btn">Toggle Sidebar</button>
+        <button class="theme-btn" id="theme-btn">
+            <i class="theme-icon fas fa-sun"></i>
+        </button>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <h2 class="all-section active" data-pages="1-1000">
+            <p>All</p>
+            <span class="download-all download-icon" data-pages="1-2">⬇</span>
+        </h2>
+    </div>
+    <div class="content" id="content">
+        <div class="controls">
+            <button id="download-all">Download All</button>
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+            <button id="rotate">Rotate</button>
+        </div>
+        <div class="pdf-viewer" id="pdf-viewer"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
+        integrity="sha512-U5C477Z8VvmbYAoV4HDq17tf4wG6HXPC6/KM9+0/wEXQQ13gmKY2Zb0Z2vu0VNUWch4GlJ+Tl/dfoLOH4i2msw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"
+        integrity="sha512-OBzVO4Vs08ySVicItHR9d1P27OEJDCmA2M1TB7a03j9o1tERYYw3hPIdPSAmVD+VvWyl7nRXz94UbGcKKQCrNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/my-js/pdfviewer.js"></script>
+    <script>
+        document.querySelectorAll('.sidebar .all-section')
+
+    </script>
+</body>
+
+</html>

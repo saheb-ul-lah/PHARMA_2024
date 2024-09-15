@@ -1,0 +1,79 @@
+#guidelines {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#guidelines h3, 
+#guidelines h4 {
+    color: #37517E;
+    margin-bottom: 10px;
+}
+
+#guidelines p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+#guidelines ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+#guidelines ul ul {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+#guidelines a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#guidelines a:hover {
+    text-decoration: underline;
+}
+
+#guidelines p strong {
+    font-weight: bold;
+}
+
+#guidelines li {
+    margin-bottom: 10px;
+}
+
+#guidelines table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#guidelines table, 
+#guidelines th, 
+#guidelines td {
+    border: 1px solid #ddd;
+}
+
+#guidelines th, 
+#guidelines td {
+    padding: 8px;
+    text-align: left;
+}
+
+#guidelines th {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+    #guidelines {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #guidelines ul {
+        margin-left: 10px;
+    }
+}
+

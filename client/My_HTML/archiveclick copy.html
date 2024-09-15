@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Pharmaceutical Journal</title>
+    <link rel="stylesheet" href="../assets/css/my-css/archiveclick2.css">
+    <link rel="stylesheet" href="../assets/css/my-css/archiveclick.css">
+
+
+    <style>
+        * {
+            font-family: montserrat;
+        }
+
+        .hamburger {
+            display: none;
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .nav-2-alter {
+            display: none;
+            width: 100%;
+            height: auto;
+            background-color: #37517E;
+
+        }
+
+        .nav-container {
+            /* width: 100%; */
+            height: 80px;
+            background-color: #37517E;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* margin-bottom: -40px; */
+        }
+
+        .nav-container .nav-2 {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav {
+            /* background-color:black; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+
+        .nav a {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+
+        }
+
+        .nav a:hover {
+            color: #fff;
+        }
+
+        .nav a img {
+            border-radius: 50%;
+            height: 40px;
+            /* align-self: center; */
+        }
+
+        a.active {
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 25px;
+            background-color: #47B2E4;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        a.nav-btn {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        a.nav-btn:hover {
+            color: grey;
+            font-weight: 800;
+        }
+
+        /* a.back-btn {
+            cursor: pointer;
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #333;
+            font-size: 16px;
+            padding: 10px 25px;
+            background-color: aliceblue;
+            border-radius: 8px;
+            font-weight: 500;
+
+        }
+
+        a.back-btn:hover {
+            color: #333;
+            background-color: #D8DBE2;
+            transition: all 0.6s;
+
+        } */
+
+        @media (max-width: 900px) {
+            a.nav-btn {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* .nav-container {
+                height: 60px;
+            }
+
+            .nav {
+                gap: 30px;
+            }
+
+            .nav a {
+                font-size: 20px;
+
+            }
+
+            a.home-btn {
+                font-size: 13px;
+            } */
+            .nav-container .nav-2 {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+
+            }
+
+            .nav-2-alter .nav-btn-2 {
+                font-size: 25px;
+            }
+
+            .nav-2-alter.show {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                gap: 30px;
+                padding: 20px 0;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            /* a.back-btn {
+                cursor: pointer;
+
+                position: absolute;
+                top: 15px;
+                left: 10px;
+                color: #333;
+                font-size: 15px;
+                padding: 8px 20px;
+                border-radius: 12px;
+
+            } */
+        }
+
+
+        @media (max-width: 480px) {
+            .aside-thumbnail{
+                width: 270px;
+            }
+            .btn-group{
+                margin-left: 25px;
+            }
+            /* a.back-btn {
+                top: 18px;
+                left: 10px;
+                font-size: 14px;
+                padding: 4px 10px;
+                border-radius: 5px;
+
+            }
+
+            a.back-btn:hover {
+                color: #333;
+                background-color: #D8DBE2;
+                transition: all 0.6s;
+
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a class="back-btn" href="../index.html">
+        Back
+    </a> -->
+    <header class="nav-container">
+        <div class="nav ">
+            <a class="sitename" href="../index.html">
+                <img src="../logo.png" alt="DU Logo">
+                CTPR
+            </a>
+        </div>
+        <div class="nav-2">
+            <a class="nav-btn nav-btn-2" class="" href="../index.html">Home</a>
+            <a class="nav-btn nav-btn-2" class="" href="../index.html#testimonials">Editorial Board</a>
+            <a class="nav-btn nav-btn-2" class="" href="../My_HTML/archive.html">Archive</a>
+            <a class="nav-btn nav-btn-2" class="" href="../index.html#guidelines">Guidelines</a>
+            <a class="nav-btn nav-btn-2" class="" href="../index.html#about">About</a>
+            <a class="nav-btn nav-btn-2" class="" href="../index.html#contact">Contact Us</a>
+        </div>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="nav-2-alter">
+        <a class="nav-btn" class="" href="../index.html">Home</a>
+        <a class="nav-btn" class="" href="../index.html#testimonials">Editorial Board</a>
+        <a class="nav-btn" class="" href="#">Archive</a>
+        <a class="nav-btn" class="" href="../index.html#guidelines">Guidelines</a>
+        <a class="nav-btn" class="" href="../index.html#about">About</a>
+        <a class="nav-btn" class="" href="../index.html#contact">Contact Us</a>
+    </div>
+    <div class="container-fluid">
+        <header
+            style="color: #333; font-size: 18px; background-color: lightgray;padding: 0px 10px; border-radius: 6px;margin-top: -30px;"
+            class="header-volume">
+            <h1></h1>
+        </header>
+
+        <div class="content">
+            <aside class="aside">
+                <img class="aside-thumbnail"
+                    src="https://dibru.ac.in/wp-content/uploads/2024/04/Cover-Page_CTPR_Dec-2023_page-0001-1063x1536.jpg"
+                    alt="">
+                <div class="btn-group" style="margin-bottom: 50px;">
+                    <button style="text-align: center;" class="load-btn load-prev-btn" id="load-more-btn">◀ Prev</button>
+                    <button style="text-align: center;" class="load-btn load-next-btn" id="load-more-btn">Next ▶</button>
+                </div>
+                <!-- <div class="filter">
+                    <h2>Refine</h2>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Select a Month <i class="fas fa-calendar-alt"></i></button>
+                        <div class="dropdown-content">
+                            <p>January</p>
+                            <p>February</p>
+                            <p>March</p>
+                            <p>April</p>
+                            <p>May</p>
+                            <p>June</p>
+                            <p>July</p>
+                            <p>August</p>
+                            <p>September</p>
+                            <p>October</p>
+                            <p>November</p>
+                            <p>December</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Research Area <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <p>Pharmacology</p>
+                            <p>Pharmaceutical Chemistry</p>
+                            <p>Pharmaceutics</p>
+                            <p>Pharmacognosy</p>
+                            <p>Pharmaceutical Technology</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Publication Type <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <p>Research Articles</p>
+                            <p>Review Articles</p>
+                            <p>Case Studies</p>
+                            <p>Short Communications</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Topics <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <p>Drug Delivery Systems</p>
+                            <p>Pharmacokinetics</p>
+                            <p>Pharmacodynamics</p>
+                            <p>Clinical Trials</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Subject Category <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-content">
+                            <p>Pharmacy Practice</p>
+                            <p>Medicinal Chemistry</p>
+                            <p>Pharmacognosy and Phytochemistry</p>
+                            <p>Clinical Pharmacology</p>
+                        </div>
+                    </div>
+                </div> -->
+            </aside>
+
+            <section class="main-content">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search within results">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="filter-bar">
+                    <!-- <div
+                        style="padding: 5px 8px; border-radius: 8px; background-color: #DDDDDD;color: #333; font-weight: 600;">
+                        <span>&nbsp;&nbsp;Scroll below ⬇ </span>
+                    </div>
+                    <div class="fast-track-mode"
+                        style="padding: 5px 8px; border-radius: 8px; background-color: #DDDDDD;color: #333; font-weight: 600;">
+                        <span>&nbsp;&nbsp;View in fast-track mode 👁 </span>
+                    </div> -->
+                    <!-- <div>
+                        <button class="sort-btn">Select issue <i class="fas fa-chevron-down"></i></button>
+                    </div> -->
+                </div>
+
+                <ul class="item-list">
+                    <li class="list-item">
+
+                        <div class="item-info">
+                            <h3></h3>
+                            <p></p>
+                            <div class="item-links">
+                                <span><i class="fas fa-file-pdf"></i> PDF</span>
+                                <button class="abstract-button"><strong>Abstract</strong> &nbsp;<i
+                                        class="fas fa-chevron-down"></i></button>
+                                <!-- <div class="abstract-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- <div class="btn-group">
+                    <button>Load More</button>
+                </div> -->
+                <!-- <div class="btn-group" style="margin-bottom: 50px;">
+                    <button class="load-btn load-prev-btn" id="load-more-btn">Load previous volume</button>
+                    <button class="load-btn load-next-btn" id="load-more-btn">Load next volume</button>
+                </div> -->
+            </section>
+
+            <aside class="aside-right">
+                <div class="card">
+                    <h3>Submission guidelines</h3>
+                    <p>Click below</p>
+                    <button onclick="window.location.href='../index.html#guidelines'">Learn More</button>
+                </div>
+                <!-- <div class="card">
+                    <h3>You can submit your manuscript via our online submission system or by emailing the Chief Editor.
+                    </h3>
+                    <button onclick="window.location.href='../index.html#contact'">Contact us</button>
+
+                </div> -->
+            </aside>
+        </div>
+    </div>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav2 = document.querySelector('.nav-2-alter');
+        
+        hamburger.addEventListener('click', () => {
+            nav2.classList.toggle('show');
+        });
+    </script>
+</body>
+<script src="../assets/js/my-js/archiveclick.js"></script>
+
+</html>

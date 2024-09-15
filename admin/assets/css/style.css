@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#content {
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+
+.footer {
+    background: #f1f1f1;
+    padding: 10px 0;
+    position: fixed;
+    width: calc(100% - 250px);
+    bottom: 0;
+}

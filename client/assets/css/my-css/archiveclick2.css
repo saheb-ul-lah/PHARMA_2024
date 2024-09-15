@@ -1,0 +1,156 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* h1, h3 {
+    font-family: 'Montserrat', sans-serif;
+} */
+.header-volume{
+    width: max-content;
+    display: block;
+    font-weight: 900;
+
+    /* width: 100%;
+    display: flex;
+    justify-content: center; */
+}
+.dropdown-content, .abstract-content {
+    display: none; /* Ensure dropdowns are hidden by default */
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown-content p, .abstract-content p {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    margin: 0;
+    padding: 5px 0;
+}
+
+.dropdown-button, .abstract-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    transition: color 0.3s ease;
+}
+
+.dropdown-button:hover, .abstract-button:hover {
+    color: #007bff;
+}
+/* Add this CSS rule to make the dropdown content visible when the 'show' class is added */
+.dropdown-content.show, .abstract-content.show {
+    display: block;
+}
+
+/* Removed: CSS rules that automatically display dropdown content when the button is focused */
+/*
+.dropdown-button:focus + .dropdown-content,
+.abstract-button:focus + .abstract-content {
+    display: block;
+}
+
+.abstract-button:focus + .abstract-content {
+    display: block;
+    opacity: 1;
+}
+*/
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.item-info h3 {
+    font-size: 18px;
+}
+
+.item-links span {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.item-links span i {
+    margin-right: 5px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .filter-bar .sort-btn {
+    font-size: 16px;
+} */
+
+.btn-group button {
+    margin-right: 10px;
+}
+
+.card button {
+    margin-top: 10px;
+}
+
+
+.aside-thumbnail{
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-content {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+  overflow-y: scroll;
+  max-height: 80vh;
+  width: fit-content;
+}
+
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+/* .scrollable-div {
+  -ms-overflow-style: none;  IE and Edge
+  scrollbar-width: none;  Firefox
+  overflow-y: scroll;
+  max-height: 50vh;
+  width: fit-content;
+}
+
+.scrollable-div::-webkit-scrollbar {
+    display: none;
+} */ 
+
+
+
+h2.issue-number{
+    padding: 5px 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 1px solid lightslategray;
+    width: fit-content;
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+
+
+

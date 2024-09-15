@@ -1,0 +1,397 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: Poppins;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DDDDDD;
+    overflow-y: scroll;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #37517E;
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.sitename {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.sitename:hover {
+    cursor: pointer;
+    color: #ff5252;
+}
+
+.btn-getstarted {
+    background-color: #ff5252;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-getstarted:hover {
+    background-color: #ff7979;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Adjust the height based on the header height */
+    padding-top: 60px; /* Make space for the fixed header */
+    padding-left: 10px; /* Add left padding to align with flex-start */
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align cards to flex-start */
+    align-items: flex-start; /* Align cards to flex-start */
+    gap: 20px; /* Increase the gap between cards */
+    width: 100%;
+    padding: 5% 2%;
+    margin-top: 30px;
+}
+
+/* Image Wrapper Styles */
+
+.image-wrapper {
+    width: 240px; /* Increased width */
+    height: 360px; /* Increased height proportionally */
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* Added for positioning the name */
+}
+.image-wrapper:hover {
+    scale: 1.05;
+}
+.volume-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out; /* Added transition for brightness */
+}
+
+/* New: Image Hover Effect */
+.image-wrapper:hover .volume-image {
+    filter: brightness(90%); /* Lower brightness on hover */
+}
+
+/* New: Name Overlay */
+.volume-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+.image-wrapper:hover .volume-name {
+    opacity: 1; /* Show the name on hover */
+}
+
+/* Modal Styles */
+.modal-content {
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width:100vw;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 15px 20px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #37517E;
+}
+
+.close {
+    color: #37517E;
+    opacity: 1;
+    font-size: 24px;
+}
+
+.close:hover {
+    color: #ff5252;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-link {
+    border: none;
+    background-color: transparent;
+    color: #37517E;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    padding: 15px 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ff5252;
+    border-bottom: 3px solid #ff5252;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px 15px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ff5252;
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 20px;
+}
+
+/* Tab Pane List Items */
+.tab-pane ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between list items */
+}
+
+.tab-pane ul li {
+    background: rgba(255, 255, 255, 0.6); /* Glassmorphism background */
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #37517E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Subtle blur for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tab-pane ul li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* Accordion Styles */
+.accordion .card {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.accordion .card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.accordion .card-header {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.accordion .card-header h5 {
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.accordion .card-header button {
+    font-size: 18px;
+    font-weight: 500;
+    color: #37517E;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.accordion .card-header button:hover,
+.accordion .card-header button:not(.collapsed) {
+    background-color: #ff5252;
+    color: #ffffff;
+}
+
+.accordion .card-header button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion .collapse {
+    background: rgba(255, 255, 255, 0.6); /* Glassmorphism background */
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.accordion .collapse.show {
+    max-height: 1000px; /* Ensure it’s large enough to accommodate the content */
+    padding: 15px;
+}
+
+.accordion .collapse:not(.show) {
+    max-height: 0;
+    padding: 0;
+}
+
+.accordion .card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between links */
+}
+
+.accordion .card-body ul li {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #37517E;
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.accordion .card-body ul li:hover {
+    background-color: #ff5252;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.accordion .card-body ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.accordion .card-body ul li:hover a {
+    color: #ffffff;
+}
+
+/* Tab and Modal Styles */
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #37517E;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ff5252;
+    color: #ffffff;
+}
+
+.tab-content .tab-pane {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .image-wrapper {
+        width: 160px; /* Adjusted width for smaller screens */
+        height: 240px; /* Adjusted height proportionally */
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 16px;
+    }
+
+    .tab-pane ul li {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-wrapper {
+        width: 140px; /* Adjusted width for smallest screens */
+        height: 210px; /* Adjusted height proportionally */
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 14px;
+    }
+
+    .tab-pane ul li {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -45,7 +45,7 @@ PHARMA_2024 is a user-friendly, web-based platform designed to simplify the proc
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/PHARMA_2024.git
+   git clone https://github.com/saheb-ul-lah/PHARMA_2024.git
    ```
 
 2. **Set Up the MySQL Database**

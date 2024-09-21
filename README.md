@@ -1,150 +1,180 @@
 ---
 
-# **PHARMA_2024: Pharmaceutical Manuscript Submission & Review System**
+# 📚 Mathematical Forum Website
 
-PHARMA_2024 is a user-friendly, web-based platform designed to simplify the process of submitting, managing, and reviewing pharmaceutical research papers. It streamlines interactions between researchers and journal editors, allowing easy submission of manuscripts and efficient management of journal volumes.
-
----
-
-## 🚀 **Features**
-
-- **Manuscript Submission System**: Researchers can upload manuscripts (PDF, DOC, DOCX) with proper validation for size and format.
-- **Admin Dashboard**: Journal editors can view, review, and manage all submissions in a dedicated admin panel.
-- **Volume Management**: Automatic journal volume creation, complete with thumbnail image uploads.
-- **Security**: Basic authentication for accessing the admin panel and secure data handling.
-- **Error Handling & Validation**: Comprehensive file validation with error messages for file size and format.
-- **Responsive Design**: Fully responsive interface for seamless use on desktop and mobile devices.
+## Overview
+The **Mathematical Forum Website** is a comprehensive platform designed for the **Mathematics Department** to facilitate the submission, management, and review of mathematical research papers. Developed under the **Digital Solution Cell**, this user-friendly interface streamlines interactions between authors and administrators, ensuring an efficient publishing process.
 
 ---
 
-## 💻 **Technology Stack**
+## 🚀 Features
 
-- **Frontend**: 
+### User Features
+
+#### Homepage
+- **Archives Section:** 
+  - Access all journal volumes.
+  - **Filtering, Sorting, and Search** functionality for easy navigation.
+  - Click on a volume to view detailed issues, displaying:
+    - **Issue Titles**
+    - **Author Names**
+    - **PDF Download/View Links**
+
+- **Submit Papers:**
+  - Authors can submit their details and PDFs to be added to a volume.
+  - Upon submission, an **Article ID** is generated for tracking.
+  - Check submission status (approved, rejected, or pending) using the Article ID on the **Track Status** page.
+
+- **Additional Sections:**
+  - **About:** Overview of the journal.
+  - **Guidelines:** Submission and formatting instructions.
+  - **Editorial Board:** Information about the editorial team.
+  - **Contact Us:** 
+    - Contact form secured with Microsoft’s hCaptcha.
+
+### Admin Panel Features
+
+- **Login Page:**
+  - Registration and password recovery functionalities.
+  - Password recovery uses **nodemailer** for OTP generation.
+
+- **Dashboard:**
+  - Welcomes the admin by name.
+
+- **Volume Management:**
+  - **Add Volume:**
+    - Input fields for:
+      - Volume Name
+      - ISSN
+      - Editor Name
+      - Date (dd-mm-yyyy)
+      - Thumbnail Upload
+  - **View Volumes:**
+    - List of existing volumes with options to edit, activate/deactivate, or delete.
+
+- **Volume Content Management:**
+  - **Add Volume Content:**
+    - Select volume and issue number.
+    - Input fields for:
+      - Category (e.g., Research Article)
+      - Title
+      - Authors
+      - Upload PDF or paste PDF URL.
+  - **View Content:**
+    - List of content with options to edit, activate/deactivate, or delete.
+
+- **Submission Management:**
+  - **View Submissions:**
+    - List of all author submissions with options to approve or reject.
+
+- **Logout Functionality:**
+  - Secure logout option for the admin.
+
+---
+
+## 💻 Technology Stack
+
+- **Frontend:** 
   - HTML5, CSS3, JavaScript
-  - Bootstrap 4 (for responsiveness and styling)
+  - Bootstrap for responsive design
 
-- **Backend**: 
+- **Backend:** 
   - PHP 7.x
-  - MySQL (for storing manuscript and journal data)
-  - PDO (for secure database interaction)
+  - MySQL for data storage
+  - PDO for secure database interaction
 
-- **Development Tools**: 
-  - XAMPP (Local server environment)
-  - Git (Version control)
+- **Development Tools:** 
+  - XAMPP for local server
+  - Git for version control
 
 ---
 
-## 🛠️ **Installation Guide**
+## 🛠️ Installation Guide
 
-### **Prerequisites**
-1. **XAMPP** (or an equivalent local server with PHP and MySQL support)
+### Prerequisites
+1. **XAMPP** (or similar local server with PHP and MySQL support)
 2. **PHP** (7.x or higher)
 3. **MySQL** (or MariaDB)
 
-### **Step-by-Step Installation**
+### Step-by-Step Installation
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/saheb-ul-lah/PHARMA_2024.git
+   git clone https://github.com/saheb-ul-lah/Mathematical_Forum.git
    ```
 
 2. **Set Up the MySQL Database**
-   - Launch PHPMyAdmin (or use any MySQL client).
-   - Create a new database named `journal_db`.
-   - Run the SQL commands found in `pharma2024_db.sql` file to set up the necessary tables:
-     ```sql
-     CREATE TABLE `submissions` (
-       `id` INT AUTO_INCREMENT PRIMARY KEY,
-       `name` VARCHAR(255) NOT NULL,
-       `email` VARCHAR(255) NOT NULL,
-       `address` TEXT NOT NULL,
-       `phone` VARCHAR(20) NOT NULL,
-       `title` VARCHAR(255) NOT NULL,
-       `description` TEXT NOT NULL,
-       `file` VARCHAR(255) NOT NULL
-     );
-     ```
+   - Launch PHPMyAdmin and create a new database named `journal_db`.
+   - Run the SQL commands from the `mathematical_forum_db.sql` file to set up tables.
 
 3. **Configure Database Credentials**
-   - Update your PHP files (`submit_paper.php`, `add_journal.php`, etc.) with the correct database credentials:
-     ```php
-     $host = 'localhost';
-     $db = 'journal_db';
-     $user = 'root';  // Your MySQL username
-     $pass = '';      // Your MySQL password
-     ```
+   - Update PHP files with your database credentials.
 
-4. **Ensure Correct Folder Permissions**
-   - Make sure the folders for file uploads (`/admin/uploads/submitted_manuscripts/` and `/admin/uploads/volume_thumbnails/`) have write permissions.
+4. **Set Folder Permissions**
+   - Ensure that the upload directories have write permissions.
 
 5. **Run the Project**
-   - Move the `PHARMA_2024` folder to the `htdocs` directory of XAMPP.
-   - Open XAMPP Control Panel and start **Apache** and **MySQL**.
-   - Visit the project by navigating to `http://localhost/PHARMA_2024/client/My_HTML/` in your browser.
+   - Move the folder to the `htdocs` directory of XAMPP.
+   - Start **Apache** and **MySQL** from the XAMPP Control Panel.
+   - Access the project at `http://localhost/Mathematical_Forum/client/My_HTML/`.
 
 ---
 
-## 🎯 **How to Use**
+## 🎯 How to Use
 
-### **1. Manuscript Submission (Researcher Side)**
-- Go to the **Submit Paper** page.
-- Fill out the form with your name, email, address, phone number, and manuscript details (title and description).
-- Upload your manuscript file in PDF, DOC, or DOCX format.
-- Submit the form and wait for a success confirmation.
+### For Authors
+1. Go to the **Submit Paper** page.
+2. Fill out the form with your details and manuscript information.
+3. Upload your manuscript file.
+4. Submit the form and await confirmation.
 
-### **2. Admin Dashboard (Journal Editor Side)**
-- Log in to the admin panel using your credentials.
-- Access the submissions list to view all submitted manuscripts.
-- Review manuscripts, and add new journal volumes with cover thumbnails.
-- Manage journal data (e.g., journal name, ISSN, editor information).
+### For Administrators
+1. Log in to the admin panel.
+2. Manage submissions and journal volumes.
+3. Review manuscripts and oversee editorial processes.
 
 ---
 
-## 📂 **Project Structure**
+## 📂 Project Structure
 
 ```plaintext
-PHARMA_2024/
+Mathematical_Forum/
 ├── client/
 │   ├── My_HTML/                  # HTML and frontend files
-│   ├── submit_paper.php          # Manuscript submission backend logic
+│   ├── submit_paper.php          # Manuscript submission logic
 ├── admin/
 │   ├── uploads/
-│   │   ├── submitted_manuscripts/ # Directory for uploaded research papers
-│   │   └── volume_thumbnails/     # Directory for journal volume thumbnails
-│   ├── add_journal.php           # Admin page for adding new journal volumes
+│   │   ├── submitted_manuscripts/ # Directory for submitted manuscripts
+│   │   └── volume_thumbnails/     # Directory for volume thumbnails
+│   ├── add_journal.php           # Admin page for new journal volumes
 ├── includes/
 │   ├── db_connect.php            # Database connection file
-│   ├── header.php                # Common header file for UI
-├── pharma2024_db.sql             # SQL script to set up the MySQL database
+│   ├── header.php                # Common header for UI
+├── mathematical_forum_db.sql     # SQL script for database setup
 └── README.md                     # Project documentation
 ```
 
 ---
 
-## 📥 **File Uploads**
+## 📥 File Uploads
 
-- **Manuscript Submission**: Uploaded files are stored in `admin/uploads/submitted_manuscripts/`.
-- **Journal Volume Thumbnails**: Thumbnails for journal volumes are stored in `admin/uploads/volume_thumbnails/`.
-  
-⚠️ Ensure the **uploads** directories have write permissions, so the server can store uploaded files.
+- Manuscripts are stored in `admin/uploads/submitted_manuscripts/`.
+- Journal volume thumbnails are stored in `admin/uploads/volume_thumbnails/`.
+
+⚠️ Ensure that the **uploads** directories have write permissions for file storage.
 
 ---
 
-## 🔧 **Troubleshooting**
+## 🔧 Troubleshooting
 
 ### Common Errors:
-- **File upload error**: 
-  - Ensure that the destination directories (`submitted_manuscripts` and `volume_thumbnails`) exist and have proper permissions.
-  
-- **Database connection error**: 
-  - Double-check your database credentials (`host`, `user`, `pass`, and `db`) in the PHP files.
-
-- **File size exceeded**: 
-  - Ensure your uploaded file is below the 5MB size limit, or adjust the size limit in the script.
+- **File Upload Error:** Check directory permissions.
+- **Database Connection Error:** Verify database credentials.
+- **File Size Exceeded:** Ensure files meet size limits or adjust limits in the script.
 
 ---
 
-## 🏗️ **Contributing**
+## 🏗️ Contributing
 
 Contributions are welcome! If you have ideas for improvements or new features, feel free to fork the repository and submit a pull request.
 
@@ -156,14 +186,10 @@ Contributions are welcome! If you have ideas for improvements or new features, f
 
 ---
 
-## 📝 **License**
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+## 🌟 Acknowledgments
 
----
-
-## 🌟 **Acknowledgments**
-
-Special thanks to all contributors and developers who have worked on this project. Also, appreciation to the open-source community for providing the tools and frameworks used in this project.
-
----
+Special thanks to our professor, 
+Dr. Rizwan Rehman 
+and my friend, 
+Kalyan Gupta for their support in developing this project.

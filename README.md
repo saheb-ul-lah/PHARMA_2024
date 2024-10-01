@@ -3,7 +3,7 @@
 # 📚 Mathematical Forum Website
 
 ## Overview
-The **Mathematical Forum Website** is a comprehensive platform designed for the **Mathematics Department** to facilitate the submission, management, and review of mathematical research papers. Developed under the **Digital Solution Cell**, this user-friendly interface streamlines interactions between authors and administrators, ensuring an efficient publishing process.
+The **Mathematical Forum Website** is a platform developed for the **Mathematics Department** under the **Digital Solution Cell**. It streamlines the submission, management, and review process of mathematical research papers, offering a smooth experience for authors and robust management tools for administrators.
 
 ---
 
@@ -13,62 +13,68 @@ The **Mathematical Forum Website** is a comprehensive platform designed for the 
 
 #### Homepage
 - **Archives Section:** 
-  - Access all journal volumes.
-  - **Filtering, Sorting, and Search** functionality for easy navigation.
-  - Click on a volume to view detailed issues, displaying:
+  - Browse all journal volumes.
+  - **Filtering, Sorting, and Search** capabilities for easy navigation.
+  - View details of issues within each volume, including:
     - **Issue Titles**
     - **Author Names**
     - **PDF Download/View Links**
 
 - **Submit Papers:**
-  - Authors can submit their details and PDFs to be added to a volume.
-  - Upon submission, an **Article ID** is generated for tracking.
-  - Check submission status (approved, rejected, or pending) using the Article ID on the **Track Status** page.
+  - Authors can submit their details and PDFs for journal volumes.
+  - An **Article ID** is generated after submission to track progress.
+  - Authors can monitor the status of their submission (approved, rejected, or pending) using the **Track Status** page with their Article ID.
 
 - **Additional Sections:**
-  - **About:** Overview of the journal.
-  - **Guidelines:** Submission and formatting instructions.
-  - **Editorial Board:** Information about the editorial team.
+  - **About:** Learn more about the journal.
+  - **Guidelines:** Provides authors with submission and formatting guidelines.
+  - **Editorial Board:** Information on the journal’s editorial team.
   - **Contact Us:** 
-    - Contact form secured with Microsoft’s hCaptcha.
+    - Secure contact form with Microsoft’s hCaptcha.
 
 ### Admin Panel Features
 
 - **Login Page:**
-  - Registration and password recovery functionalities.
-  - Password recovery uses **nodemailer** for OTP generation.
+  - Includes registration and forgot password options.
+  - Forgot password functionality is integrated with **nodemailer** for OTP generation.
 
 - **Dashboard:**
-  - Welcomes the admin by name.
+  - Greets the admin by name and provides quick access to management tools.
 
 - **Volume Management:**
-  - **Add Volume:**
-    - Input fields for:
-      - Volume Name
-      - ISSN
-      - Editor Name
-      - Date (dd-mm-yyyy)
-      - Thumbnail Upload
-  - **View Volumes:**
-    - List of existing volumes with options to edit, activate/deactivate, or delete.
+  - **Add Volume:** Admins can input details such as:
+    - Volume Name
+    - ISSN
+    - Editor Name
+    - Date (dd-mm-yyyy)
+    - Thumbnail Upload
+  - **View Volumes:** Allows editing, activating/deactivating, or deleting existing volumes.
 
 - **Volume Content Management:**
-  - **Add Volume Content:**
-    - Select volume and issue number.
-    - Input fields for:
-      - Category (e.g., Research Article)
-      - Title
-      - Authors
-      - Upload PDF or paste PDF URL.
-  - **View Content:**
-    - List of content with options to edit, activate/deactivate, or delete.
+  - **Add Volume Content:** Select the volume and issue, then input:
+    - Category (e.g., Research Article)
+    - Title
+    - Authors
+    - Upload PDF or provide PDF URL.
+  - **View Content:** Offers options to edit, activate/deactivate, or delete content.
 
 - **Submission Management:**
-  - **View Submissions:**
-    - List of all author submissions with options to approve or reject.
+  - **View Submissions:** Displays all submissions, with options to approve or reject them.
+
+- **Admin Management (Super Admin):**
+  - **Manage Admins:** The Super Admin has the authority to:
+    - Add, remove, or edit admins.
+    - Deactivate/activate any admin. Deactivated admins will not be able to log in.
+  - **Active Admins Tab:** Displays a list of logged-in admins, including:
+    - Username
+    - Email
+    - IP Address
+    - Login Time
+    - Status (Active/Inactive)
+  - Admins can filter this list by date.
 
 - **Logout Functionality:**
-  - Secure logout option for the admin.
+  - Secure logout option for admins.
 
 ---
 
@@ -81,10 +87,9 @@ The **Mathematical Forum Website** is a comprehensive platform designed for the 
 - **Backend:** 
   - PHP 7.x
   - MySQL for data storage
-  - PDO for secure database interaction
 
 - **Development Tools:** 
-  - XAMPP for local server
+  - XAMPP for local server environment
   - Git for version control
 
 ---
@@ -105,16 +110,16 @@ The **Mathematical Forum Website** is a comprehensive platform designed for the 
 
 2. **Set Up the MySQL Database**
    - Launch PHPMyAdmin and create a new database named `journal_db`.
-   - Run the SQL commands from the `mathematical_forum_db.sql` file to set up tables.
+   - Import the SQL commands from the `mathematical_forum_db.sql` file to set up the database schema.
 
 3. **Configure Database Credentials**
-   - Update PHP files with your database credentials.
+   - Update PHP files (e.g., `db_connect.php`) with your database credentials.
 
 4. **Set Folder Permissions**
-   - Ensure that the upload directories have write permissions.
+   - Ensure the `uploads` directories have write permissions for file storage.
 
 5. **Run the Project**
-   - Move the folder to the `htdocs` directory of XAMPP.
+   - Move the project folder to the `htdocs` directory of XAMPP.
    - Start **Apache** and **MySQL** from the XAMPP Control Panel.
    - Access the project at `http://localhost/Mathematical_Forum/client/My_HTML/`.
 
@@ -124,14 +129,15 @@ The **Mathematical Forum Website** is a comprehensive platform designed for the 
 
 ### For Authors
 1. Go to the **Submit Paper** page.
-2. Fill out the form with your details and manuscript information.
-3. Upload your manuscript file.
-4. Submit the form and await confirmation.
+2. Fill in the required details and upload the manuscript file.
+3. Submit the form and note the generated **Article ID** for future reference.
+4. Track your submission status (approved, rejected, or pending) using the **Track Status** page with the Article ID.
 
 ### For Administrators
-1. Log in to the admin panel.
-2. Manage submissions and journal volumes.
-3. Review manuscripts and oversee editorial processes.
+1. Log in to the admin panel with your credentials.
+2. Use the dashboard to manage volumes, submissions, and content.
+3. Add new journal volumes or upload new articles to existing volumes.
+4. Super Admin can manage the access rights of other admins.
 
 ---
 
@@ -141,16 +147,30 @@ The **Mathematical Forum Website** is a comprehensive platform designed for the 
 Mathematical_Forum/
 ├── client/
 │   ├── My_HTML/                  # HTML and frontend files
+│   ├── forms/                    # Forms for submission and interaction
+│   ├── assets/                   # Assets like CSS, JS, and images
+│   ├── PHPMailer/                # For email-related functionalities
 │   ├── submit_paper.php          # Manuscript submission logic
+│   ├── fetch_volumes.php         # Backend for fetching journal volumes
+│   ├── contact.php               # Backend for contact form
+│   ├── newsletter.php            # Newsletter subscription functionality
 ├── admin/
-│   ├── uploads/
-│   │   ├── submitted_manuscripts/ # Directory for submitted manuscripts
-│   │   └── volume_thumbnails/     # Directory for volume thumbnails
-│   ├── add_journal.php           # Admin page for new journal volumes
+│   ├── PHPMailer/                # PHPMailer for sending emails
+│   ├── assets/                   # CSS, JS, images for admin panel
+│   ├── includes/                 # Reusable PHP components
+│   ├── uploads/                  # Storage for submitted manuscripts and volume thumbnails
+│   ├── vendor/                   # Composer dependencies
+│   ├── add_journal.php           # Admin function to add a new journal volume
+│   ├── add_content.php           # Admin function to add content to a volume
+│   ├── view_journals.php         # Admin view for managing journals
+│   ├── forgot_password.php       # Password reset functionality
+│   ├── login.php                 # Admin login page
+│   ├── register.php              # Admin registration page
+│   ├── verify_otp.php            # OTP verification for account recovery
 ├── includes/
 │   ├── db_connect.php            # Database connection file
-│   ├── header.php                # Common header for UI
-├── mathematical_forum_db.sql     # SQL script for database setup
+│   ├── header.php                # Common header for frontend UI
+├── mathematical_forum_db.sql     # SQL script to set up MySQL database
 └── README.md                     # Project documentation
 ```
 
@@ -159,7 +179,7 @@ Mathematical_Forum/
 ## 📥 File Uploads
 
 - Manuscripts are stored in `admin/uploads/submitted_manuscripts/`.
-- Journal volume thumbnails are stored in `admin/uploads/volume_thumbnails/`.
+- Thumbnails for journal volumes are stored in `admin/uploads/volume_thumbnails/`.
 
 ⚠️ Ensure that the **uploads** directories have write permissions for file storage.
 
@@ -168,28 +188,14 @@ Mathematical_Forum/
 ## 🔧 Troubleshooting
 
 ### Common Errors:
-- **File Upload Error:** Check directory permissions.
-- **Database Connection Error:** Verify database credentials.
-- **File Size Exceeded:** Ensure files meet size limits or adjust limits in the script.
+- **File Upload Error:** Ensure the destination directories (`submitted_manuscripts` and `volume_thumbnails`) have correct permissions.
+- **Database Connection Error:** Double-check the database credentials (`host`, `user`, `password`, `db`) in the PHP files.
+- **File Size Exceeded:** Ensure uploaded files are within the size limits, or adjust the size limit in your server settings.
 
 ---
 
-## 🏗️ Contributing
+## 📝 Contact Information
 
-Contributions are welcome! If you have ideas for improvements or new features, feel free to fork the repository and submit a pull request.
-
-### Steps to Contribute:
-1. **Fork the repository**.
-2. Create a new branch for your feature or bug fix.
-3. **Commit your changes**.
-4. Open a pull request with a description of your changes.
+The project is archived and set as **read-only**, but if any institution or individual is interested in implementing this project, feel free to contact me via [LinkedIn](https://www.linkedin.com/in/saheb-ul-lah).
 
 ---
-
-
-## 🌟 Acknowledgments
-
-Special thanks to our professor, 
-Dr. Rizwan Rehman 
-and my friend, 
-Kalyan Gupta for their support in developing this project.

@@ -3,9 +3,11 @@
 # 📚 PHARMA_2024
 
 ## Overview
-The **PHARMA_2024** repository is a part of the **Mathematical Forum** initiative, initially developed for the **Mathematics Department** under the **Digital Solution Cell**. It is a comprehensive platform that facilitates the submission, management, and review of research papers. The repository version is archived (read-only), but the actual hosted version on **[mathematical-forum.org](http://mathematical-forum.org)** includes additional features for real-world use.
+The **PHARMA_2024** repository is a part of the **Mathematical Forum** initiative, initially developed for the **Mathematics Department** under the **Digital Solution Cell**. It is a comprehensive platform that facilitates the submission, management, and review of research papers. The repository version is archived (read-only), but the actual hosted version on 
+**[mathematical-forum.org](http://mathematical-forum.org)** 
+includes additional features for real-world use.
 
-Institutes interested in implementing the project are welcome to contact the developer via [LinkedIn](https://www.linkedin.com/in/md-sahebullah-262aa919b/).
+Institutes interested in implementing the project are welcome to contact the developer via [LinkedIn](https://www.linkedin.com/in/saheb-ullah-05292a258/).
 
 ---
 
@@ -120,7 +122,7 @@ Institutes interested in implementing the project are welcome to contact the dev
 
 2. **Set Up the MySQL Database**
    - Launch PHPMyAdmin and create a new database named `journal_db`.
-   - Import the SQL commands from the `mathematical_forum_db.sql` file to set up the database schema.
+   - Import the SQL commands from the `journal_db.sql` file to set up the database schema.
 
 3. **Configure Database Credentials**
    - Update PHP files (e.g., `db_connect.php`) with your database credentials.
@@ -132,6 +134,7 @@ Institutes interested in implementing the project are welcome to contact the dev
    - Move the project folder to the `htdocs` directory of XAMPP.
    - Start **Apache** and **MySQL** from the XAMPP Control Panel.
    - Access the project at `http://localhost/PHARMA_2024/client/My_HTML/`.
+   - Access the admin panel at `http://localhost/PHARMA_2024/admin/login.php`.
 
 ---
 
